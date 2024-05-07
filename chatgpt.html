@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        section {
+            margin-top: 60px; /* Adjust this margin to prevent content from being hidden under the sticky header */
+            padding: 20px;
+        }
+
+        /* Add some styles for demonstration purposes */
+        section {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sticky Header</h1>
+    </header>
+
+    <section>
+        <h2>Content Goes Here</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+        <!-- More content here -->
+    </section>
+
+    <script>
+        // Optional: Add JavaScript for additional behavior
+
+        // Example: Make the header change background color on scroll
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition > 50) {
+                header.style.backgroundColor = '#555';
+            } else {
+                header.style.backgroundColor = '#333';
+            }
+        });
+    </script>
+</body>
+</html>
